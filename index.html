@@ -1,0 +1,145 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Commerce Behavioral Patterns</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🛍️ My E-Commerce Store</h1>
+        <p>Observer | Strategy | Command Design Patterns</p>
+    </header>
+
+
+    <main>
+
+        <!-- ==================== -->
+        <!-- OBSERVER PATTERN -->
+        <!-- ==================== -->
+
+        <section class="product">
+
+            <h2>💻 Laptop</h2>
+
+            <p>Product: Premium Laptop</p>
+
+            <p>
+                Price:
+                ₹<span id="price">50000</span>
+            </p>
+
+            <button onclick="subscribePriceDrop()">
+                🔔 Subscribe for Price Drop
+            </button>
+
+            <button onclick="dropPrice()">
+                💰 Simulate Price Drop
+            </button>
+
+            <p id="notification"></p>
+
+        </section>
+
+
+        <!-- ==================== -->
+        <!-- STRATEGY PATTERN -->
+        <!-- ==================== -->
+
+        <section class="payment">
+
+            <h2>💳 Checkout & Payment</h2>
+
+            <p>Select Payment Method:</p>
+
+            <select id="paymentMethod">
+
+                <option value="card">
+                    Credit Card
+                </option>
+
+                <option value="upi">
+                    UPI
+                </option>
+
+                <option value="wallet">
+                    Wallet
+                </option>
+
+            </select>
+
+            <button onclick="makePayment()">
+                Pay ₹45000
+            </button>
+
+            <p id="paymentMessage"></p>
+
+        </section>
+
+
+        <!-- ==================== -->
+        <!-- COMMAND PATTERN -->
+        <!-- ==================== -->
+
+        <section class="cart">
+
+            <h2>🛒 Shopping Cart</h2>
+
+            <p>
+                Laptop - ₹45000
+            </p>
+
+            <p>
+                Cart Items:
+                <span id="cartItems">0</span>
+            </p>
+
+            <p>
+                Total:
+                ₹<span id="cartTotal">0</span>
+            </p>
+
+            <button onclick="addItem()">
+                ➕ Add Item
+            </button>
+
+            <button onclick="removeItem()">
+                ➖ Remove Item
+            </button>
+
+            <button onclick="applyCoupon()">
+                🎟️ Apply Coupon
+            </button>
+
+            <br><br>
+
+            <button onclick="undoAction()">
+                ↩️ Undo
+            </button>
+
+            <button onclick="redoAction()">
+                ↪️ Redo
+            </button>
+
+            <p id="cartMessage"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
